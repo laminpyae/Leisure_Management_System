@@ -1,0 +1,5 @@
+.bg-gold {
+  background-color: #9ea71b;
+  background-image: linear-gradient(180deg, #9ea71b 10%, #8d9424 100%);
+  background-size: cover;
+}
