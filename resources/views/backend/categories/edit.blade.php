@@ -28,6 +28,30 @@
 			<form action="{{route('categories.update', $category->id)}}" method="POST">
 				@csrf
 				@method('PUT')
+			<div class="form-group row">
+				<label for="photo" class="col-sm-2">Photo:</label>
+				<div class="col-sm-10">
+					<ul class="nav nav-tabs">
+						<li class="nav-item">
+							<a href="#old" class="nav-link active" data-toggle="tab">Old Photo</a>
+						</li>
+						<li class="nav-item">
+							<a href="#new" class="nav-link" data-toggle="tab">New Photo</a>
+						</li>
+					</ul>
+
+					<div class="tab-content">
+						<div class="tab-pane fade show active mt-3" id="old" role="tabpanel">
+							<img src="{{asset($category->image)}}" class="img-fluid w-25">
+							<input type="hidden" name="oldphoto" value="{{$category->image}}">
+						</div>
+
+						<div class="tab-pane fade mt-3" id="new" role="tabpanel">
+						<input type="file" name="image" id="photo" accept="images/*">
+					</div>
+					</div>
+				</div>
+			</div>
 				<div class="form-group row">
 					<label for="name" class="col-form-label col-sm-2">Name:</label>
 					<div class="col-sm-10">

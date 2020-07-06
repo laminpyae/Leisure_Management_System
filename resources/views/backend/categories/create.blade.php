@@ -25,8 +25,14 @@
               <h6 class="m-0 font-weight-bold text-success">Add New Category</h6>
             </div>
             <div class="card-body">
-			<form action="{{route('categories.store')}}" method="POST">
+			<form action="{{route('categories.store')}}" method="POST" enctype="multipart/form-data">
 				@csrf
+			<div class="form-group row">
+				<label for="image" class="col-lg-2">Photo:</label>
+				<div class="col-lg-10">
+					<input type="file" name="image" id="image" accept="images/*">
+				</div>
+			</div>
 				<div class="form-group row">
 					<label for="name" class="col-form-label col-sm-2">Name:</label>
 					<div class="col-sm-10">

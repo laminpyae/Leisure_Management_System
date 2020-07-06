@@ -50,6 +50,19 @@
 					</div>
 				</div>
 				<div class="form-group row">
+					<label class="col-form-label col-sm-2">Facilities</label>
+					<div class="col-sm-10">
+						@foreach($facilities as $row)
+						<div class="form-check">
+  					<input class="form-check-input" type="checkbox" value="{{$row->id}}" id="defaultCheck1" name="facilities[]">
+	  				<label class="form-check-label" for="defaultCheck1">
+	   				{{$row->name}}
+					  </label>
+					</div>
+						@endforeach
+					</div>
+				</div>
+				<div class="form-group row">
 					<div class="col-sm-2"></div>
 					<div class="col-sm-10">
 						<input type="submit" value="Add" class="btn bg-gold text-white shadow-sm">

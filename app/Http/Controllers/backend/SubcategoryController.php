@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Subcategory;
 use App\Category;
+use App\Facility;
 
 class SubcategoryController extends Controller
 {
@@ -17,7 +18,8 @@ class SubcategoryController extends Controller
     public function index()
     {
         $subcategories = Subcategory::all();
-        return view('backend.subcategories.index', compact('subcategories'));
+        $facilities = Facility::all();
+        return view('backend.subcategories.index', compact('subcategories', 'facilities'));
     }
 
     /**
@@ -28,7 +30,8 @@ class SubcategoryController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('backend.subcategories.create', compact('categories'));
+        $facilities = Facility::all();
+        return view('backend.subcategories.create', compact('categories', 'facilities'));
     }
 
     /**
@@ -45,13 +48,17 @@ class SubcategoryController extends Controller
             'price' => 'required'
         ]);
 
-        // dd($request);
+        $facilities=$request->facilities;
         // Data Insert
         $subcategory = new Subcategory;
         $subcategory->type = $request->type;
         $subcategory->price = $request->price;
         $subcategory->category_id = $request->category_id;
         $subcategory->save();
+
+        foreach ($facilities as  $value) {
+            $subcategory->facilities()->attach($value);
+        }
 
         return redirect()->route('subcategories.index');
     }

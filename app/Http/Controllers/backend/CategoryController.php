@@ -40,12 +40,22 @@ class CategoryController extends Controller
         // Validation
         $request->validate([
             'name' => 'required',
+            'image' => 'required|image'
         ]);
 
+        // dd(gettype($request->image));
+        // File Upload (photo = name from input)
+        $imageName = time().'.'.$request->image->extension();
+
+        $request->image->move(public_path('images'), $imageName);
+
+        $filepath = 'images/'.$imageName;
         // dd($request);
+
         // Data Insert
         $category = new Category;
         $category->name = $request->name;
+        $category->image = $filepath;
         $category->save();
 
         return redirect()->route('categories.index');
@@ -87,12 +97,29 @@ class CategoryController extends Controller
         // Validation
         $request->validate([
             'name' => 'required',
+            'image' => 'required'
         ]);
 
         // dd($request);
+          // File Upload (photo = name from input)
+        if ($request->hasFile('image')) {
+        
+           $imageName = time().'.'.$request->image->extension();
+
+           $request->image->move(public_path('images'), $imageName);
+
+           $filepath = 'images/'.$imageName;
+
+           // Delete Old Photo
+           unlink($request->oldphoto);
+
+        } else {
+            $filepath = $request->oldphoto;
+        }
         // Data Insert
         $category = Category::find($id);
         $category->name = $request->name;
+        $category->image = $filepath;
         $category->save();
 
         return redirect()->route('categories.index');

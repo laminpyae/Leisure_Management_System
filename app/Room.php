@@ -13,4 +13,14 @@ class Room extends Model
     [
     	'room_no', 'status', 'subcategory_id'
     ];
+
+       public function subcategory()
+    {
+    	return $this->belongsTo('App\Subcategory');
+    }
+
+        public function bookings()
+    {
+    	return $this->belongsTo('App\Booking');
+    }
 }

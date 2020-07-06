@@ -24,3 +24,13 @@ Route::resource('subcategories', 'backend\SubcategoryController');
 Route::resource('facilities', 'backend\FacilityController');
 
 Route::resource('rooms', 'backend\RoomController');
+
+Route::resource('bookings', 'backend\BookingController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('users', 'backend\UserController');
+
+Route::get('bookingform', 'frontend\FrontendController@bookingform');

@@ -18,6 +18,7 @@
                   <thead>
                     <tr>
                       <th>No.</th>
+                      <th>Image</th>
                       <th>Name</th>
                       <th>Action</th>
                     </tr>
@@ -25,6 +26,7 @@
                   <tfoot>
                     <tr>
                       <th>No.</th>
+                      <th>Image</th>
                       <th>Name</th>
                       <th>Action</th>
                     </tr>
@@ -36,6 +38,9 @@
                   @foreach($categories as $row)
                   <tr>
                     <td>{{$i++}}</td>
+                    <td>
+                      <img src="{{asset($row->image)}}" class="img-fluid w-25 col-sm-4" alt="">
+                    </td>
                     <td>
                       {{$row->name}}
                     </td>

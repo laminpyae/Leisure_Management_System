@@ -1,0 +1,51 @@
+body {
+	background: #d6a943;
+    background: -webkit-linear-gradient(59deg,#d6a943, #F0E68C, #EEE8AA, #F0E68C, #d6a943);
+    background: linear-gradient(59deg,#d6a943, #F0E68C, #EEE8AA, #F0E68C, #d6a943);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.headerTitle {
+	background-color: #d6a943;
+	background-image: linear-gradient(to bottom, #d6a943, #CFB53B);
+	background-size: cover;
+	font-size: 2rem;
+	text-shadow: 0 0 5px #000;
+	box-shadow: 0 0 10px #000;
+}
+
+.secTitle {
+	color: #d6a943;
+	text-shadow: 0 0 5px #CFB53B;
+}
+
+.secTitle::before,
+.secTitle::after {
+    display: inline-block;
+    content: "";
+    border-top: .3rem solid #d6a943;
+    width: 3rem;
+    margin: 0 1rem;
+    transform: translateY(-0.5rem);
+}
+
+.btn-gold {
+	background: #d6a943;
+	color: #ffff;
+}
+
+.text-gold {
+	color: #d6a943;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+.btnhover:hover {
+	cursor: pointer;
+	display: block;
+}

@@ -11,6 +11,11 @@ class Facility extends Model
 
     protected $fillable = 
     [
-    	'services', 'extraservices', 'subcategory_id'
+    	'name'
     ];
+
+      public function subcategories()
+    {
+    	return $this->belongsTo('App\Subcategory');
+    }
 }

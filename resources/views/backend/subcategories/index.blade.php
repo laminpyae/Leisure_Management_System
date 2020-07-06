@@ -21,6 +21,7 @@
                       <th>Type</th>
                       <th>Price</th>
                       <th>Category</th>
+                      <th>Facilities</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -30,6 +31,7 @@
                       <th>Type</th>
                       <th>Price</th>
                       <th>Category</th>
+                      <th>Facilities</th>
                       <th>Action</th>
                     </tr>
                   </tfoot>
@@ -47,7 +49,13 @@
                       {{$row->price}}
                     </td>
                     <td>
-                      {{$row->category_id}}
+                      {{$row->category->name}}
+                    </td>
+                    <td>
+                      @php
+                      foreach($row->facilities as $val)
+                        echo $val->name.' , ';
+                       @endphp
                     </td>
                     <td>
                      <div class="btn-group">

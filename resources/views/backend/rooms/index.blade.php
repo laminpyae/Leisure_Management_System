@@ -43,7 +43,11 @@
                       {{$row->room_no}}
                     </td>
                      <td>
-                      {{$row->subcategory_id}}
+                      {{$row->subcategory->type}}
+                     <!--  @php
+                      foreach($row->subcategory->facilities as $val)
+                        echo $val->name.' , ';
+                       @endphp -->
                     </td>
                     <td>
                       {{$row->status}}
