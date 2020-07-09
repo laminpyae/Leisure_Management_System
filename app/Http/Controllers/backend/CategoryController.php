@@ -40,7 +40,8 @@ class CategoryController extends Controller
         // Validation
         $request->validate([
             'name' => 'required',
-            'image' => 'required|image'
+            'image' => 'required|image',
+            'description' => 'required'
         ]);
 
         // dd(gettype($request->image));
@@ -55,9 +56,10 @@ class CategoryController extends Controller
         // Data Insert
         $category = new Category;
         $category->name = $request->name;
+        $category->description = $request->description;
         $category->image = $filepath;
         $category->save();
-
+        flash('Successfully Added!')->success();
         return redirect()->route('categories.index');
     }
 
@@ -69,7 +71,8 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        $category = Category::find($id);
+        return view('backend.categories.detail', compact('category'));
     }
 
     /**

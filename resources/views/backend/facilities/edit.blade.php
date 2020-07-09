@@ -29,25 +29,9 @@
 				@csrf
 				@method('PUT')
 				<div class="form-group row">
-					<label for="services" class="col-form-label col-sm-2">Services:</label>
+					<label for="services" class="col-form-label col-sm-2">Service Name:</label>
 					<div class="col-sm-10">
-						<input type="text" name="services" id="services" class="form-control" value="{{$facility->services}}">
-					</div>
-				</div>
-				<div class="form-group row">
-					<label for="extra" class="col-form-label col-sm-2">Extra Services:</label>
-					<div class="col-sm-10">
-						<input type="text" name="extra" id="extra" class="form-control" value="{{$facility->extraservices}}">
-					</div>
-				</div>
-				<div class="form-group row">
-					<label class="col-form-label col-sm-2">Subcategory</label>
-					<div class="col-sm-10">
-						<select name="category_id" class="form-control">
-							@foreach($subcategories as $row)
-							<option value="{{$row->id}}">{{$row->type}}</option>
-							@endforeach
-						</select>
+						<input type="text" name="name" id="services" class="form-control" value="{{$facility->name}}">
 					</div>
 				</div>
 				<div class="form-group row">

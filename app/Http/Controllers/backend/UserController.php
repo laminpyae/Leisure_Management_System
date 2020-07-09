@@ -50,7 +50,7 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        $userinfo = Userinfo::all();
+        $userinfo = Userinfo::where('user_id', $id)->get();
         return view('backend.users.info', compact('user', 'userinfo'));
     }
 

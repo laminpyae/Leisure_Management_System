@@ -3,6 +3,7 @@
 @section('content')
   <!-- Page Heading -->
           <!-- Page Heading -->
+          @include('flash::message')
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-2 text-gray-800">Facility</h1>
             <a href="{{route('facilities.create')}}" class="d-none d-sm-inline-block btn btn-sm bg-gold text-white shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>Add New</a>
@@ -18,18 +19,14 @@
                   <thead>
                     <tr>
                       <th>No.</th>
-                      <th>Services</th>
-                      <th>Extra Services</th>
-                      <th>Subcategory</th>
+                      <th>Name</th>
                       <th>Action</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
                       <th>No.</th>
-                      <th>Services</th>
-                      <th>Extra Services</th>
-                      <th>Subcategory</th>
+                      <th>Name</th>
                       <th>Action</th>
                     </tr>
                   </tfoot>
@@ -41,13 +38,7 @@
                   <tr>
                     <td>{{$i++}}</td>
                     <td>
-                      {{$row->services}}
-                    </td>
-                     <td>
-                      {{$row->extraservices}}
-                    </td>
-                    <td>
-                      {{$row->subcategory_id}}
+                      {{$row->name}}
                     </td>
                     <td>
                      <div class="btn-group">

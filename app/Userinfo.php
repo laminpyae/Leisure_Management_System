@@ -14,7 +14,7 @@ class Userinfo extends Model
     	'profile', 'phone', 'nric', 'user_id'
     ];
 
-      public function User()
+      public function user()
     {
     	return $this->belongsTo('App\User');
     }

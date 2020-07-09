@@ -52,6 +52,7 @@ class RoomController extends Controller
         $rooms->subcategory_id = $request->subcategory_id;
         $rooms->save();
 
+        flash('Successfully Added!')->success();
         return redirect()->route('rooms.index');
     }
 

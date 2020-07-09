@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Userinfo;
 
 class RegisterController extends Controller
 {
@@ -29,7 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = RouteServiceProvider::Index;
 
     /**
      * Create a new controller instance.
@@ -62,12 +64,31 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create(Request $request, array $data)
     {
-        return User::create([
+        // dd($request);
+        // File Upload (photo = name from input)
+        $imageName = time().'.'.$request->profile->extension();
+
+        $request->profile->move(public_path('images'), $imageName);
+
+        $filepath = 'images/'.$imageName;
+
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        $userdetail = Userinfo::create([
+            'profile' => $filepath,
+            'phone' => $data['phone'],
+            'nric' => $data['nric'],
+            'user_id' => $user->id,
+        ]);
+
+        $user->assignRole('customer'); //user role default tat mhat tr
+        return $user;
+
     }
 }

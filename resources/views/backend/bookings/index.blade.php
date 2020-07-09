@@ -56,17 +56,17 @@
                       {{$row->total_charges}}
                     </td>
                     <td>
-                      {{$row->customer_id}}
+                      {{$row->user->name}}
                     </td>
                     <td>
                      <div class="btn-group">
-                        <a href="{{route('bookings.edit', $row->id)}}" class="btn btn-warning">Edit</a>
+                        <a href="{{route('bookings.edit', $row->id)}}" class="btn btn-success">Confirm</a>
                       </div>
                       <div class="btn-group">
                        <form action="{{route('bookings.destroy', $row->id)}}" method="POST" onsubmit="return confirm('Are you Sure?')">
                          @csrf
                          @method('DELETE')
-                         <input type="submit" value="Delete" class="btn btn-danger">
+                         <input type="submit" value="Cancel" class="btn btn-danger">
                       </form>
                       </div>
                     </td>

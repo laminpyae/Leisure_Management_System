@@ -28,25 +28,9 @@
 			<form action="{{route('facilities.store')}}" method="POST">
 				@csrf
 				<div class="form-group row">
-					<label for="service" class="col-form-label col-sm-2">Services:</label>
+					<label for="service" class="col-form-label col-sm-2">Services Name:</label>
 					<div class="col-sm-10">
-						<input type="text" name="service" id="service" class="form-control" placeholder="Enter Service Names">
-					</div>
-				</div>
-				<div class="form-group row">
-					<label for="extra" class="col-form-label col-sm-2">Extra Services:</label>
-					<div class="col-sm-10">
-						<input type="text" name="extra" id="extra" class="form-control" placeholder="Enter Extra Services">
-					</div>
-				</div>
-				<div class="form-group row">
-					<label class="col-form-label col-sm-2">Subcategory</label>
-					<div class="col-sm-10">
-						<select name="subcategory_id" class="form-control">
-							@foreach($subcategories as $row)
-							<option value="{{$row->id}}">{{$row->type}}</option>
-							@endforeach
-						</select>
+						<input type="text" name="name" id="service" class="form-control" placeholder="Enter Service Names">
 					</div>
 				</div>
 				<div class="form-group row">

@@ -19,4 +19,11 @@ class Booking extends Model
 			->withPivot('qty')
 			->withTimestamps();
 	}
+
+	public function user()
+	{
+
+		return $this->belongsTo('App\User', 'customer_id');
+
+	}
 }

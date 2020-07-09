@@ -1,51 +1,790 @@
-body {
-	background: #d6a943;
-    background: -webkit-linear-gradient(59deg,#d6a943, #F0E68C, #EEE8AA, #F0E68C, #d6a943);
-    background: linear-gradient(59deg,#d6a943, #F0E68C, #EEE8AA, #F0E68C, #d6a943);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+html {
+  scroll-behavior: smooth;
+  }
 
-.headerTitle {
-	background-color: #d6a943;
-	background-image: linear-gradient(to bottom, #d6a943, #CFB53B);
-	background-size: cover;
-	font-size: 2rem;
-	text-shadow: 0 0 5px #000;
-	box-shadow: 0 0 10px #000;
-}
+  .home-banner{
+      background: linear-gradient(to bottom,rgba(0,0,0,0.3)0,rgba(0,0,0,0.8)100%),
+      url(img/banner1.jpg);
+      width: 100%;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      margin-bottom: 70px;
+  }
+   .accomodation-banner{
+      background: linear-gradient(to top,rgba(255,255,255,0.1)0,rgba(0,0,0,0.5)100%),
+      url(img/banner3.jpg);
+      width: 100%;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      margin-bottom: 70px;
+  }
+   .wedding-banner{
+      background: linear-gradient(to top,rgba(255,255,255,0.1)0,rgba(0,0,0,0.5)100%),
+      url(img/banner2.jpg);
+      width: 100%;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      margin-bottom: 70px;
+  }
+  .sapandfitness-banner{
+    background: linear-gradient(to top,rgba(255,255,255,0.1)0,rgba(0,0,0,0.5)100%),
+      url(img/banner4.jpg);
+      width: 100%;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      margin-bottom: 70px;
+  }
+   .resort-banner{
+      background: linear-gradient(to top,rgba(255,255,255,0.2)0,rgba(0,0,0,0.6)100%),
+      url(img/banner5.jpg);
+      width: 100%;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      margin-bottom: 70px;
+  }
+  #navigation-item a{
+    color:white;
+    font-family: Poiret_One;
+    letter-spacing: 3px;
+    font-weight: bold;
+  }
 
-.secTitle {
-	color: #d6a943;
-	text-shadow: 0 0 5px #CFB53B;
-}
 
+  #navigation-item a:hover{
+    background-color: #b38a00;
+  }
+
+  /*contenttitle*/
+  .title h1{
+    margin: 50px auto;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    color: #d3b456;
+    /*z-index: -2;*/
+  }
 .secTitle::before,
 .secTitle::after {
     display: inline-block;
     content: "";
     border-top: .3rem solid #d6a943;
-    width: 3rem;
+    width: 8rem;
     margin: 0 1rem;
     transform: translateY(-0.5rem);
 }
+  .content{
+    color: #000;
+    line-height: 30px;
+    word-spacingcontent4: 2px;
+  }
 
-.btn-gold {
-	background: #d6a943;
-	color: #ffff;
+  #order{
+  padding: 1rem 2.15rem;
+  font-size: .85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0rem;
+  color: #b38a00;
+  background-color:  white;
+  margin-top: 6%;
+  border: 2px solid #d6a943;
+}
+#order:hover{
+  background-color: #b38a00;
+  color: white;
+  border: 2px solid #fffcontent4;
+}
+#headertitle{
+  font-family: Poiret_One;
+  margin-top: 150px;
+  color: white;
+  font-weight:;
+  text-shadow: 10px 10px 10px black;
+}
+.headertitle2{
+  font-size: 40px;
+  font-family: Poiret_One;
+   color: white;
+  font-weight:;
+  text-shadow: 10px 10px 10px black;
+}
+  
+.review1 h1{
+  font-family: Merienda;
+  font-size: 35px;
+}
+.review1 h4{
+  font-family: Merienda;
+  padding-bottom: 15px; 
+}
+.review1 h6{
+  font-family: Poiret_One;
+  line-height: 27px;
+  font-size: 21px;
+  text-align: center;
+}
+.review2 h6{
+  font-family: Poiret_One;
+  line-height: 25px;
+  font-size: 19px;
+  padding-top: 8px;
+}
+.review2 h4{
+  font-family: Poiret_One;
+  font-size: 24px;
+  font-weight: bold;
+}
+  .parallex-text{
+    margin:0;
+    padding: 0;
+    border:0;
+    color: white;
+    text-align: left;
+    font-family: Merienda;
+  }
+  .parallex-text2{
+    color: white;
+     font-family: Poiret_One;
+     letter-spacing:2px;
+     text-align: left;
+     font-size: 18px;
+     line-height: 25px;
+     
+  }
+  .margin{
+  margin:15% 0;
+  }
+  .parallex{
+    background: linear-gradient(to top,rgba(255,255,255,0.3)0,rgba(0,0,0,0.6)100%),
+      url(img/secbanner.jpg) repeat fixed 100%;
+      
+  }
+  .parallex-inner{
+    padding-top: 15%;
+    padding-bottom: 15%;
+  }
+  .image {
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-radius: 3px 3px 3px;
+  width: 100%;
 }
 
-.text-gold {
-	color: #d6a943;
-	text-decoration: none;
+
+
+
+/*accomodation*/
+  .Content2 h6{
+    line-height: 33px;
+    font-family: Poiret_One;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .Content2 h2{
+    font-family: Merienda;
+    font-size: 29px;
+  }
+  .icon span{
+    color: #563921;
+  }
+  .icon p{
+    color: black;
+    font-family: Poiret_One;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .icon h6{
+    font-family: Poiret_One;
+    font-size: 19px;
+    word-spacing: 2px;
+  }
+
+
+  .room-type h3{
+  color: #563921;
+  font-family: Merienda;
+  font-weight: ;
+  font-size: 30px;
+  }
+  .room-type{  
+    background-color: ;
+  }
+  .room-type h6{
+  color: #563921;
+  font-family: Poiret_One;
+  font-size: 20px;
+  }
+.roombanner{
+  position: relative;
+  opacity: 10;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.roombanner{
+  background-image: url(img/banner5.jpg);
+  min-height: 100%;
+}
+.room-type button a{
+  color: black;
+}
+.room-type button a:hover{
+  color: white;
 }
 
-a:hover {
-	color: #000;
-	text-decoration: none;
+.room-type button{
+  color: black;
+  font-size: 21px;
+  border:2px black ;
+  border-style: double;
+  font-family: Poiret_One;
+  background-color: white;
+}
+.room-type button:hover{
+  color: white;
+  font-size: 20px;
+  background-color: #b38a00;
+  border:2px #b38a00 groove;
+  transition: 0.5s;
+  font-family: Poiret_One;
+}
+/*Single-room*/
+.detail-singleroom h3{
+  color: #d6a943;
+  font-family: Merienda;
+  font-size: 36px;
+  padding-bottom: 10px;
+}
+.detail-singleroom span{
+  color: black;
+  font-family: Merienda;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.detail-singleroom ul li{
+  color: grey;
+  font-family: Poiret_One;
+  padding-top: 10px;
+  color: black;
+  list-style: square;
+
+}
+.detail-singleroom h5{
+  color: black;
+  font-family: Poiret_One;
+  font-size: 18px;
+  padding-top: 8px;
+  line-height: 30px;
+}
+.detail-singleroom a{
+  color: black;
+  font-size: 24px;
+  border:2px black ;
+  border-style: double;
+  font-family: Poiret_One;
+}
+.detail-singleroom a:hover{
+  color: white;
+  font-size: 25px;
+  background-color: #b38a00;
+  border:2px #b38a00 groove;
+  transition: 0.5s;
+  font-family: Poiret_One;
+}
+.detail-singleroom p{
+  color: black;
+  font-family: Poiret_One;
+  font-size: 17px;
+  padding-left: 7px;
+}
+.Ac_logo {
+  width: 50px;
+  height: 55px;
+  margin-top: -10px;
+}
+.Ac_logo_text{
+  padding-left: 180px;
+  margin-top: -10px;
+  font-family: Poiret_One;
+  color: black;
+  font-weight: bold;
+  font-size:18px;
+}
+.Pc_logo {
+  width: 50px;
+  height: 55px;
+  margin-top: -0px;
+}
+.Pc_logo_text{
+  padding-left: 335px;
+  font-family: Poiret_One;
+  color: black;
+  font-weight: bold;
+  font-size:18px;
 }
 
-.btnhover:hover {
-	cursor: pointer;
-	display: block;
+
+.checked {
+  color: orange;
+  font-size:17px;
+  padding-left: 8px;
 }
+.dining-title h2{
+  text-align: center;
+  font-family: Poiret_One;
+  padding-top: 100px;
+  font-weight: bold;
+}
+.dining-title h3{
+  text-align: center;
+  font-family: Poiret_One;
+   font-size: 25px;
+}
+.dining-title p{
+  color: black;
+  text-align: center;
+  font-family: Poiret_One;
+  font-size: 25px;
+}
+.dining-title img{
+  padding-left: 489px;
+}
+/*wedding*/
+.wedding-slider{
+  background-color: black;
+    background: linear-gradient(to bottom,rgba(153,101,21,0.1)0,rgba(153,101,21,0.7)100%);
+    padding: 60px;
+  }
+ .card{
+  border: 1px white solid;
+ } 
+ .card-text p{
+  color: black;
+  font-family: Poiret_One;
+ }
+  .wedding-theme img{
+    box-shadow: 10px 10px 5px grey
+  }
+ .wedding-theme button{
+  color: black;
+  font-size: 21px;
+  border:2px black ;
+  border-style: double;
+  font-family: Poiret_One;
+  background-color: white;
+}
+.wedding-theme button:hover{
+  color: white;
+  font-size: 20px;
+  background-color: #b38a00;
+  border:2px #b38a00 groove;
+  transition: 0.5s;
+  font-family: Poiret_One;
+}
+
+.weddingtitle h2{
+  font-family: Merienda;
+}
+.weddingtitle h4{
+  font-family: Poiret_One;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0px 10px 0px;
+}
+.weddingtitle h5{
+  font-family: Poiret_One;
+  text-align: center;
+  line-height: 30px;
+  padding:0px 0px 45px 0px;
+}
+.Dinner-design h6{
+  font-family: Poiret_One;
+  padding: 30px 0px 0px 0px
+}
+.Dinner-design img{
+  border:1px black solid;
+}
+ #more {display: none;}
+
+
+/*spaandfitness*/
+.content4 h4{
+   font-family: Merienda;
+   font-size: 30px;
+}
+
+.content4 h6{
+  font-family: Poiret_One;
+  line-height: 33px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.popular-service h3{
+ font-family: Merienda;
+   font-size: 30px; 
+}
+.popular-service h6{
+ font-family: Poiret_One;
+   font-size: 20px; 
+   line-height: 28PX;
+   padding-top: 15px;
+}
+.popular-service button{
+  background-color: white;
+  color: black;
+  font-family: Merienda;
+  border: 1px black solid;
+}
+.popular-service button:hover{
+  background-color: #b38a00;
+  color: white;
+  font-family: Merienda;
+  border: 1px black solid;
+}
+.fitness-icon span{
+  padding-left: 280px;
+}
+.fitness-icon h4{
+  font-family: Poiret_One;
+  font-weight: bold;
+  padding: 15px 0px 8px 35px;
+}
+.fitness-icon h5{
+    font-family: Poiret_One;
+}
+.workout1{
+      background: linear-gradient(to bottom,rgba(0,0,0,0.3)0,rgba(0,0,0,0.8)100%),
+      url(img/gym.jpg);
+      width: 50%;
+      height: 50vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+}
+.workout2{
+      background: linear-gradient(to bottom,rgba(0,0,0,0.3)0,rgba(0,0,0,0.8)100%),
+      url(img/gym1.jpg);
+      width: 50%;
+      height: 50vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+}
+
+.workout3{
+     background: linear-gradient(to bottom,rgba(0,0,0,0.3)0,rgba(0,0,0,0.8)100%),
+      url(img/gym2.jpg);
+      width: 50%;
+      height: 50vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+}
+
+.workout4{
+     background: linear-gradient(to bottom,rgba(0,0,0,0.3)0,rgba(0,0,0,0.8)100%),
+      url(img/gym3.jpeg);
+      width: 50%;
+      height: 50vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  text-align: center;
+
+ }
+.gym-club h4{
+  font-family: Merienda;
+  font-size: 31px;
+  padding-top: 20px;
+}
+.gym-club h6{
+  font-family: Poiret_One;
+  line-height: 27px;
+  padding-top:12px;
+  font-size: 20px;
+}
+
+  /*resorts*/
+  .Content5 h6{
+    line-height: 33px;
+    font-family: Poiret_One;
+    font-weight: normal;
+    font-size: 20px;
+  }
+  .Content5 p{
+    font-family: Merienda;
+    font-size: 29px;
+  }
+
+  .pool h5{
+    font-family: Merienda;
+    font-size: 27px;
+  }
+  .pool{
+    margin-top:50px; 
+  }
+  .pool h6{
+    font-family: Poiret_One;
+    font-size: 20px;
+    line-height: 35px;
+  }
+  .about-resort{
+    background-color: #392e2c;
+    margin: 100px 0px 50px 0px;
+  }
+
+  .about-resort img{
+    display: block;
+    height: auto;
+    width: 100%;
+    transition: 0.2s;
+  }
+  .about-resort img:hover{
+    border:5px solid #392e2c;
+    transition: 0.5s;
+  }
+  .inner{
+    overflow: hidden;
+  }
+  .inner img{
+    transition: all 1.6s ease;
+  }
+  .inner:hover img{
+    transform: scale(1.1);
+  }
+  .restaurant a{
+    text-decoration: none;
+    color: #b38a00;
+    font-family: Poiret_One;
+    font-weight: bold;
+    display: block;
+  }
+  .restaurant a:hover{
+    color: #000;
+  }
+  .restaurant span{
+    font-family: Poiret_One;
+    font-style: italic;
+
+  }
+  .restaurant h3{
+    font-family: Merienda;
+
+  }
+  .restaurant h6{
+    font-family: Poiret_One;
+    line-height: 27px;
+    margin-top: 20px;
+  }
+  .resort-title h3,p{
+    color: #fff;
+    padding-top: 15px;
+  }
+  .resort-title h3{
+    padding-top: 100px;
+    font-family: Merienda;
+  }
+  .resort-title p{
+    font-family: Poiret_One;
+  }
+  .text-on-image{
+    position: absolute;
+    top: 50%;
+    color: blue;
+  }
+  .resort-location h6{
+    font-family: Poiret_One;
+    font-weight: bold;
+    color: #563921;
+  }
+  .resort-location p{
+    font-family: Poiret_One;
+    font-weight: bold;
+    color: black;
+  }
+  .para {
+    line-height: 1.5rem;
+    font-size: 25px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*FOOTER*/
+
+  footer {
+    background: blue;
+    background: -webkit-linear-gradient(59deg, black, #392e2c);
+    background: linear-gradient(59deg, #152238, #563921,#152238);
+    color: white;
+    margin-top:100px;
+  }
+
+  footer a {
+    color: #fff;
+    font-size: 14px;
+    transition-duration: 0.2s;
+  }
+
+  footer a:hover {
+    color: #FA944B;
+    text-decoration: none;
+  }
+
+  .copy {
+    font-size: 12px;
+    padding: 10px;
+    border-top: 1px solid #FFFFFF;
+  }
+
+  .footer-middle {
+    padding-top: 2em;
+    color: white;
+    font-family: Poiret_One;
+  }
+
+   hr{
+   border-top: 1px solid white;
+   width: 30%;
+   margin-left: 0px;
+  }
+
+
+  /*SOCİAL İCONS*/
+
+  /* footer social icons */
+
+  ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0;
+  }
+
+  ul.social-network li {
+    display: inline;
+    margin: 0 5px;
+  }
+
+
+  /* footer social icons */
+
+  .social-network a.icoLinkedin:hover {
+    background-color: #563921;
+  }
+
+  .social-network a.icoLinkedin:hover i {
+    color: #fff;
+  }
+
+  .social-network a.socialIcon:hover,
+  .socialHoverClass {
+    color: #44BCDD;
+  }
+
+  .social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+
+  .social-circle li i {
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .social-circle li a:hover i,
+  .triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+
+  .social-circle i {
+    color: #595959;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+
+  .social-network a {
+    background-color: #F9F9F9;
+  }
+
+  .text-dark {
+    font-family: Poiret_One;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+
+
+/*https://www.hyatt.com/en-US/hotel/singapore/andaz-singapore/sinaz/rooms
+https://www.perfectweddings.sg/search/hotel-banquet/
+https://theasiacollective.com/best-wedding-venues-singapore/
+https://singaporebrides.com/articles/wedding-guide/
+https://www.marriott.com/hotels/event-planning/wedding-planning/sinwi-the-westin-singapore/
+https://mdbootstrap.com/docs/jquery/components/cards/*/

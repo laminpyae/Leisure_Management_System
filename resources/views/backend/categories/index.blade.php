@@ -3,6 +3,7 @@
 @section('content')
   <!-- Page Heading -->
           <!-- Page Heading -->
+          @include('flash::message')
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-2 text-gray-800">Category</h1>
             <a href="{{route('categories.create')}}" class="d-none d-sm-inline-block btn btn-sm bg-gold text-white shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i>Add New</a>
@@ -39,21 +40,26 @@
                   <tr>
                     <td>{{$i++}}</td>
                     <td>
-                      <img src="{{asset($row->image)}}" class="img-fluid w-25 col-sm-4" alt="">
+                      <img src="{{asset($row->image)}}" class="img-fluid w-25" alt="">
                     </td>
                     <td>
                       {{$row->name}}
                     </td>
                     <td>
-                     <div class="btn-group">
-                        <a href="{{route('categories.edit', $row->id)}}" class="btn btn-warning">Edit</a>
-                      </div>
-                      <div class="btn-group">
-                       <form action="{{route('categories.destroy', $row->id)}}" method="POST" onsubmit="return confirm('Are you Sure?')">
-                         @csrf
-                         @method('DELETE')
-                         <input type="submit" value="Delete" class="btn btn-danger">
-                      </form>
+                      <div class="d-flex">
+                        <div class="btn-group">
+                          <a href="{{route('categories.show', $row->id)}}" class="btn btn-primary">Detail</a>
+                        </div>
+                          <div class="btn-group">
+                          <a href="{{route('categories.edit', $row->id)}}" class="btn btn-warning">Edit</a>
+                        </div>
+                        <div class="btn-group">
+                         <form action="{{route('categories.destroy', $row->id)}}" method="POST" onsubmit="return confirm('Are you Sure?')">
+                           @csrf
+                           @method('DELETE')
+                           <input type="submit" value="Delete" class="btn btn-danger">
+                        </form>
+                        </div>
                       </div>
                     </td>
                   </tr>

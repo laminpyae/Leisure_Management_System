@@ -3,6 +3,7 @@
 @section('content')
   <!-- Page Heading -->
           <!-- Page Heading -->
+          @include('flash::message')
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-2 text-gray-800">Subcategory</h1>
             <a href="{{route('subcategories.create')}}" class="d-none d-sm-inline-block btn btn-sm bg-gold shadow-sm text-white"><i class="fas fa-download fa-sm text-white-50"></i>Add New</a>

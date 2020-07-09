@@ -66,9 +66,9 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Settings:</h6>
-            <a class="collapse-item" href="buttons.html">Category</a>
-            <a class="collapse-item" href="cards.html">Subcategory</a>
-            <a class="collapse-item" href="cards.html">Facility</a>
+            <a class="collapse-item" href="{{route('categories.index')}}">Category</a>
+            <a class="collapse-item" href="{{route('subcategories.index')}}">Subcategory</a>
+            <a class="collapse-item" href="{{route('facilities.index')}}">Facility</a>
           </div>
         </div>
       </li>
@@ -82,8 +82,8 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Customer</a>
-            <a class="collapse-item" href="utilities-border.html">Booking</a>
+            <a class="collapse-item" href="{{route('users.index')}}">User</a>
+            <a class="collapse-item" href="{{route('bookings.index')}}">Booking</a>
           </div>
         </div>
       </li>
@@ -300,8 +300,8 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Auth::user()->name}}</span>
+                <img class="img-profile rounded-circle" src="{{asset('images/1594093341.jpeg')}}">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -318,9 +318,13 @@
                   Activity Log
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="route{{'logout'}}" data-toggle="modal" data-target="#logoutModal" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                 @csrf
+                </form>
                 </a>
               </div>
             </li>

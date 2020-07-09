@@ -5,6 +5,8 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Booking;
+use App\Subcategory;
+use App\User;
 
 class BookingController extends Controller
 {
@@ -13,10 +15,20 @@ class BookingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    // Customer cannot go into booking index
+    public function __construct()
+    {
+        $this->middleware('role:admin')->only('index');
+
+    }
+
     public function index()
     {
         $bookings = Booking::all();
-        return view('backend.bookings.index', compact('bookings'));
+
+        $users = User::all();
+        return view('backend.bookings.index', compact('bookings', 'users'));
     }
 
     /**
@@ -37,26 +49,28 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
+        
         // Validation
         $request->validate([
-            'reservation_no' => 'required',
-            'checkin_date' => 'required',
-            'checkout_date' => 'required',
-            'total_charges' => 'required',
-            'customer_id' => 'required'
+            'checkinDate' => 'required',
+            'checkoutDate' => 'required',
+            'subcategory' => 'required',
+            'totalprice' => 'required'
         ]);
-
         // dd($request);
+        $subcategory=$request->subcategory;
         // Data Insert
         $bookings = new Booking;
-        $bookings->reservation_no = $request->reservation_no;
-        $bookings->checkin_date = $request->checkin_date;
-        $bookings->checkout_date = $request->checkout_date;
-        $bookings->total_charges = $request->total_charges;
+        $bookings->reservation_no = uniqid();
+        $bookings->checkin_date = $request->checkinDate;
+        $bookings->checkout_date = $request->checkoutDate;
+        $bookings->total_charges = $request->totalprice;
         $bookings->customer_id = $request->customer_id;
         $bookings->save();
 
-        return redirect()->route('bookings.index');
+        return Response()->json([
+            'status'=>'Booking Successful!'
+        ]);
     }
 
     /**

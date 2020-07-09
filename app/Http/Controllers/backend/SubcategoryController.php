@@ -56,10 +56,12 @@ class SubcategoryController extends Controller
         $subcategory->category_id = $request->category_id;
         $subcategory->save();
 
+        // Pivot Looping and selecting data
         foreach ($facilities as  $value) {
             $subcategory->facilities()->attach($value);
         }
 
+        flash('Successfully Added!')->success();
         return redirect()->route('subcategories.index');
     }
 

@@ -32,11 +32,17 @@
 				<div class="col-lg-10">
 					<input type="file" name="image" id="image" accept="images/*">
 				</div>
-			</div>
+				</div>
 				<div class="form-group row">
 					<label for="name" class="col-form-label col-sm-2">Name:</label>
 					<div class="col-sm-10">
 						<input type="text" name="name" id="name" class="form-control" placeholder="Enter Category Name">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="description" class="col-form-label col-sm-2">Description:</label>
+					<div class="col-sm-10">
+						<textarea name="description" id="description" cols="30" rows="5" class="form-control"></textarea>
 					</div>
 				</div>
 				<div class="form-group row">

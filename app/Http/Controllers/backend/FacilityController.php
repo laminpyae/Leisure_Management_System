@@ -41,18 +41,16 @@ class FacilityController extends Controller
     {
          // Validation
         $request->validate([
-            'service' => 'required',
-            'extra' => 'required'
+            'name' => 'required',
         ]);
 
         // dd($request);
         // Data Insert
         $facilities = new Facility;
-        $facilities->services = $request->service;
-        $facilities->extraservices = $request->extra;
-        $facilities->subcategory_id = $request->subcategory_id;
+        $facilities->name = $request->name;
         $facilities->save();
 
+        flash('Successfully Added!')->success();
         return redirect()->route('facilities.index');
     }
 
@@ -91,16 +89,13 @@ class FacilityController extends Controller
     {
           // Validation
         $request->validate([
-            'service' => 'required',
-            'extra' => 'required'
+            'name' => 'required',
         ]);
 
         // dd($request);
         // Data Insert
         $facilities = Facility::find($id);
-        $facilities->services = $request->service;
-        $facilities->extraservices = $request->extra;
-        $facilities->subcategory_id = $request->subcategory_id;
+        $facilities->name = $request->name;
         $facilities->save();
 
         return redirect()->route('facilities.index');
