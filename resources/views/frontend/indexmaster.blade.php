@@ -50,6 +50,9 @@
       <li class="nav-item" id="navigation-item">
         <a class="nav-link linkcolor" href="{{route('resort')}}">Resort</a>
       </li>
+      <li class="nav-item" id="navigation-item">
+        <a class="nav-link linkcolor" href="{{route('meetingevent')}}">Meeting&Event</a>
+      </li>
       <!-- Login/Logout -->
      <?php if (Auth::user()): ?>
         <li class="nav-item" id="navigation-item">
@@ -112,9 +115,7 @@
             <li><a href="{{route('wedding')}}">Wedding</a></li>
             <li><a href="{{route('spafittness')}}">Spa&Fitness</a></li>
             <li><a href="{{route('resort')}}">Resorts</a></li>
-            <li>
-              <a href="#"></a>
-            </li>
+            <li><a href="{{route('meetingevent')}}">Meeting&Event</a></li>
           </ul>
         </div>
       </div>
@@ -141,6 +142,20 @@
 <!-- footer end -->
 
 <script type="text/javascript">
+  // Read More Button
+    $(document).ready(function(){
+      $(".read").click(function(){
+        $(this).prev().toggle();
+        $(this).siblings('.dots').
+        toggle();
+        if($(this).text()=='read less'){
+          $(this).text('read more');
+        }
+        else{
+          $(this).text('read less');
+        }
+      });
+    });
   
   // Scroll Change Nav Background
   $(window).scroll(function() {

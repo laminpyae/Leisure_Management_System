@@ -25,7 +25,7 @@ class BookingController extends Controller
 
     public function index()
     {
-        $bookings = Booking::all();
+        $bookings = Booking::orderBy('id', 'desc')->get();
 
         $users = User::all();
         return view('backend.bookings.index', compact('bookings', 'users'));
@@ -68,9 +68,11 @@ class BookingController extends Controller
         $bookings->customer_id = $request->customer_id;
         $bookings->save();
 
-        return Response()->json([
-            'status'=>'Booking Successful!'
-        ]);
+        // return Response()->json([
+        //     'status'=>'Booking Successful!'
+        // ]);
+        return view('frontend.bookingsuccess');
+
     }
 
     /**

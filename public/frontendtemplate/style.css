@@ -52,6 +52,16 @@ html {
       background-size: cover;
       margin-bottom: 70px;
   }
+    .Meeting-banner{
+      background: linear-gradient(to top,rgba(255,255,255,0.2)0,rgba(0,0,0,0.6)100%),
+      url(img/banner6.jpg);
+      width: 100%;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      margin-bottom: 70px;
+  }
   #navigation-item a{
     color:white;
     font-family: Poiret_One;
@@ -417,8 +427,12 @@ html {
 .Dinner-design img{
   border:1px black solid;
 }
- #more {display: none;}
-
+.more{
+  display: none;
+}
+.post{
+ font-family: Poiret_One;
+}
 
 /*spaandfitness*/
 .content4 h4{
@@ -521,6 +535,90 @@ html {
   padding-top:12px;
   font-size: 20px;
 }
+
+/*Meeting*/
+.meeting-slider{
+    margin:100px 0px 100px 0px;
+}
+.meeting-image{
+    background: linear-gradient(to bottom,rgba(0,0,0,0.3)0,rgba(0,0,0,0.8)100%);
+    background-image: url(img/meeting1.jpg); 
+  }
+.meeting-text{
+background-color: #f2f3f4;
+padding:80px;
+}
+.meeting-text span{
+color: black;
+font-family: Poiret_One;
+font-weight: bold;
+}
+.meeting-text h4{
+color: black;
+font-family: Merienda;
+text-align: center;
+ padding-bottom:12px;
+}
+.meeting-text h6{
+  color: black;
+  font-family: Poiret_One;
+  line-height: 25px;
+  text-align: center;
+  font-size: 18px;
+
+}
+.card-body h4{
+font-family: Merienda;
+border-bottom: 2px solid #000;
+padding-bottom: 14px;
+}
+
+.card-body h6{
+font-family: Poiret_One;
+line-height: 1.5rem;
+}
+.Meeting-title h3{
+font-family: Merienda;
+}
+.about-meeting h3{
+font-family: Merienda;
+padding-bottom: 22px;
+
+}
+.about-meeting h6{
+font-family: Poiret_One;
+line-height: 33px;
+font-size: 21px;
+}
+  .parallex-text3{
+    margin:0;
+    padding: 0;
+    border:0;
+    color: white;
+    text-align: left;
+    font-family: Merienda;
+  }
+  .parallex-text4{
+    color: white;
+     font-family: Poiret_One;
+     letter-spacing:2px;
+     text-align: left;
+     font-size: 18px;
+     line-height: 25px;  
+  }
+  .margin1{
+  margin:10% 0;
+  }
+  .parallex1{
+    background: linear-gradient(to top,rgba(0,0,0,0.9)0,rgba(255,255,255,0.3)100%),
+      url(img/meeting.jpg) no-repeat fixed 100%;
+      
+  }
+  .parallex-inner1{
+    padding-top: 12%;
+    padding-bottom: 12%;
+  }
+
 
   /*resorts*/
   .Content5 h6{

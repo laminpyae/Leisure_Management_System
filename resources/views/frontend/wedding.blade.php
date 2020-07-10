@@ -45,9 +45,14 @@
             <img src="{{asset('frontendtemplate/img/weddingtheme1.jpg')}}" class="card-img-top" alt="...">
           </div>
           <div class="card-body">
-           <div class="card-text">
-             <p>For an intimate banquet, the Atrium Ballroom offers a seating capacity of 450 people.   <br> <span id="dots"></span><span id="more">Price Range (per table): $1,164 - $1,986 <br> Number of Tables: 45 - 320Rectangular <br>Pillar-less <br>Average ceiling height (Atrium Ballroom) and high ceiling (Fairmont and Stamford Ballroom)</span></p>
-             <button onclick="myFunction()" id="myBtn" class="">Read more</button>
+           <div class="post">
+           For an intimate banquet, the Atrium Ballroom offers a seating capacity of 450 people.
+           Nearly 25 percent of all couples
+              <span class="dots">...</span>
+              <span class="more">
+           Number of Tables: 45 - 320Rectangular <br> Pillar-less <br> Average ceiling height (Atrium Ballroom) and high ceiling (Fairmont and Stamford Ballroom)
+            </span>
+            <button class="read">readmore</button>
            </div>
           </div>
         </div>
@@ -58,9 +63,11 @@
             <img src="{{asset('frontendtemplate/img/weddingtheme4.jpg')}}" class="card-img-top" alt="...">
           </div>
           <div class="card-body">
-           <div class="card-text">
-             <p> For an experience like no other, the Windows East and Windows West ballrooms.. <span id="dots"></span><span id="more">Price Range (per table): $1,481 - $1,751 <br> Number of Tables: 15 - 32Rectangular <br>Pillar-less <br>Average ceiling height (Atrium Ballroom) and high ceiling (Fairmont and Stamford Ballroom)</span></p>
-             <button onclick="myFunction()" id="myBtn" class="">Read more</button>
+           <div class="post">
+           more relaxed, natural and full of local, homespun touches (like handmade wood tables and chairs in a barn venue)..
+            <span class="dots"></span>
+            <span class="more">Price Range (per table): $1,481 - $1,751 <br> Number of Tables: 15 - 32Rectangular <br>Pillar-less <br>Average ceiling height (Atrium Ballroom) and high ceiling (Fairmont and Stamford Ballroom)</span>
+             <button  class="read">Read more</button>
            </div>
           </div>
         </div>
@@ -78,9 +85,11 @@
             <img src="{{asset('frontendtemplate/img/weddingtheme3.jpg')}}" class="card-img-top" alt="...">
           </div>
           <div class="card-body">
-           <div class="card-text">
-             <p>The elegant John Jacob Ballroom is the ideal venue for your wedding because of its column-free structure .. <span id="dots">...</span><span id="more">PPrice Range (per table): $1,624 - $2,340 <br> Number of Tables: 42<br> Rectangular <br>Pillar-less <br>High ceiling</span></p>
-             <button onclick="myFunction()" id="myBtn" class="">Read more</button>
+           <div class="post">
+            The elegant John Jacob  the Atrium Ballroom is the ideal venue for your wedding because of its column-free structure 
+             <span class="dots">...</span>
+             <span class="more">PPrice Range (per table): $1,624 - $2,340 <br> Number of Tables: 42<br> Rectangular <br>Pillar-less <br>High ceiling</span>
+             <button  class="read">Read more</button>
            </div>
           </div>
         </div>
@@ -91,9 +100,11 @@
             <img src="{{asset('frontendtemplate/img/weddingtheme2.jpg')}}" class="card-img-top" alt="...">
           </div>
           <div class="card-body">
-           <div class="card-text">
-             <p>The Village Hotel Albert Court has always been a unique wedding venue for its restored pre-war shop house ..<span id="dots">...</span><span id="more">Price Range (per person): from $68<br> Number of Tables: 12 <br>Rectangular <br>Pillar-less <br>Average ceiling height</span></p>
-             <button onclick="myFunction()" id="myBtn" class="">Read more</button>
+           <div class="post">
+             The Village Hotel Albert Court has always been a unique wedding venue for its restored pre-war shop house .
+             <span class="dots">...</span>
+             <span class="more">Price Range (per person): from $68<br> Number of Tables: 12 <br>Rectangular <br>Pillar-less <br>Average ceiling height</span>
+             <button  class="read">Read more</button>
            </div>
           </div>
         </div>

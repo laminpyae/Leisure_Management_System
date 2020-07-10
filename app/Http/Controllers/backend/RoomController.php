@@ -16,7 +16,7 @@ class RoomController extends Controller
      */
     public function index()
     {
-        $rooms = Room::all();
+        $rooms = Room::orderBy('id', 'desc')->get();
         return view('backend.rooms.index', compact('rooms'));
     }
 

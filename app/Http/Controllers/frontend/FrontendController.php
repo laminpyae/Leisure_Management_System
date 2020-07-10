@@ -51,4 +51,14 @@ class FrontendController extends Controller
         return view('frontend.index');
     }
 
+    public function bookingsuccess($value='')
+    {
+        return view('frontend.bookingsuccess');
+    }
+
+    public function meetingevent($value='')
+    {
+        return view('frontend.meetingevent');
+    }
+
 }

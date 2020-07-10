@@ -1,7 +1,6 @@
 @extends('frontend.indexmaster')
 
 @section('content')
-
 <div class="home-banner">
 <div class="container">
   <div class="row justify-content-center">

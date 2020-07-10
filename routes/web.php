@@ -54,3 +54,7 @@ Route::get('roomdetail/{id}', 'frontend\FrontendController@roomdetail')->name('r
 
 Route::get('/', 'frontend\FrontendController@index')->name('index');
 
+Route::get('bookingsuccess', 'frontend\FrontendController@bookingsuccess')->name('bookingsuccess');
+
+Route::get('meetingevent', 'frontend\FrontendController@meetingevent')->name('meetingevent');
+

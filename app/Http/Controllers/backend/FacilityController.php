@@ -16,7 +16,7 @@ class FacilityController extends Controller
      */
     public function index()
     {
-        $facilities = Facility::all();
+        $facilities = Facility::orderBy('id', 'desc')->get();
         return view('backend.facilities.index', compact('facilities'));
     }
 

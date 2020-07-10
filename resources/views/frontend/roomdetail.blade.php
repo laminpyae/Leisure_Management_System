@@ -9,9 +9,9 @@
     </div>
       <div class="col-8 text-center">
           <p class="headertitle2 d-lg-block d-none ">HOTEL RESERVATION SYSTEM</p>
-          <div class="d-lg-block d-none">
+          <!-- <div class="d-lg-block d-none">
             <button class="btn" id="order">Book Now</button>
-          </div>
+          </div> -->
         </div>
     </div>
   </div>

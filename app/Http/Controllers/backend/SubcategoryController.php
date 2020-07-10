@@ -17,7 +17,7 @@ class SubcategoryController extends Controller
      */
     public function index()
     {
-        $subcategories = Subcategory::all();
+        $subcategories = Subcategory::orderBy('id', 'desc')->get();
         $facilities = Facility::all();
         return view('backend.subcategories.index', compact('subcategories', 'facilities'));
     }
